@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsseBiFashion - Prenota il tuo Appuntamento</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Google (opzionale ma consigliato per un look professionale) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="app-body">
+
+    <header class="container">
+        <h1>EsseBiFashion di Sonia</h1>
+        <h2>Il tuo angolo di bellezza e stile</h2>
+    </header>
+
+    <main class="container booking-form">
+        <h3 class="section-title"><span role="img" aria-label="haircut icon">✂️</span> Prenota il Tuo Appuntamento</h3>
+
+        <form id="bookingForm">
+            <!-- Sezione 1: Dati Clienti -->
+            <div class="form-group grid-2">
+                <div class="input-field full-width">
+                    <label for="nomeCognome">Nome e Cognome</label>
+                    <input type="text" id="nomeCognome" name="nomeCognome" required placeholder="Inserisci il tuo nome e cognome">
+                </div>
+                <div class="input-field full-width">
+                    <label for="telefono">Numero di Telefono</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Esempio: 32012345678">
+                </div>
+            </div>
+
+            <!-- Sezione 2: Dettagli Appuntamento -->
+            <div class="form-group grid-2">
+                <div class="input-field full-width">
+                    <label for="servizio">Servizio Desiderato</label>
+                    <select id="servizio" name="servizio" required>
+                        <option value="" disabled selected>-- Seleziona un servizio --</option>
+                        <option value="taglio">Taglio Capelli</option>
+                        <option value="permanente">Permanente</option>
+                        <option value="tiraggio-colore">Tiraggio Colore</option>
+                        <option value="piega">Piega Capelli</option>
+                        <option value="meches">Mèches</option>
+                        <option value="balayage">Balayage</option>
+                        <option value="tonalizzante">Tonalizzante</option>
+                        <option value="trattamenti">Trattamenti Vari</option>
+                    </select>
+                </div>
+                <div class="input-field full-width">
+                    <label for="dataAppuntamento">Data Appuntamento</label>
+                    <input type="date" id="dataAppuntamento" name="dataAppuntamento" required>
+                </div>
+            </div>
+
+             <!-- Sezione 3: Ora -->
+             <div class="form-group">
+                <label for="orario">Seleziona l'orario:</label>
+                <input type="time" id="orario" name="orario" required>
+            </div>
+
+
+            <button type="submit" class="btn-primary">Prenota Ora Appuntamento</button>
+
+            <!-- Messaggio di conferma/errore -->
+            <div id="message" aria-live="polite" style="margin-top: 20px; text-align: center; display: none;"></div>
+        </form>
+    </main>
+
+    <footer class="container contact-info">
+        <h3>Contattaci</h3>
+        <p><strong>Telefono Studio:</strong> Tel. 0746.202198 | Cell. 349.1414672</p>
+        <p><strong>Email:</strong> essebifashion@hotmail.it</p>
+        <p>📍 **Indirizzo:** Via Trebiani, 18, 02100 Rieti</p>
+        <p class="slogan">EsseBiFashion by Sonia - Il tuo angolo di bellezza e stile.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body></html>

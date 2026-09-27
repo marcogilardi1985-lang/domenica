@@ -1,0 +1,186 @@
+/* ============================== */
+/* STYLESHEET per EsseBiFashion */
+/* Ispirato al Brand Kit del Flyer fornito (Versione Definitiva) */
+/* ============================== */
+
+/* Variabili di Colore - Toni più profondi e eleganti */
+:root {
+    --primary-dark: #8b1a4d; /* Un bordeaux/magenta profondo per i titoli e accenti */
+    --secondary-pink: #e9c5dd; /* Rosa cipria chiaro, per sfondi delicati o hover */
+    --text-main: #333333;
+    --text-light: #666666;
+    --border-color: #ddd;
+}
+
+/* Reset Base e Font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fefefe; /* Bianco sporco/crema per un effetto lusso */
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e leggibile */
+}
+
+/* Contenitore Principale - Centratura ed ombreggiatura */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Ombra più pronunciata */
+    border-radius: 15px;
+}
+
+/* HEADER (Logo e Slogan) */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Fonte elegante per il logo */
+    color: var(--primary-dark);
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    color: var(--text-light);
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    margin-top: -10px; /* Stretto per sembrare un blocco unico */
+    font-size: 1.4em;
+}
+
+/* Titoli Sezioni (Booking) */
+.booking-form h3 {
+    color: var(--primary-dark);
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.booking-form h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-dark);
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Form Groups e Layout Grid */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Input Fields Styling */
+.input-field label {
+    font-weight: bold;
+    color: var(--text-main);
+    display: block; /* Forza il blocco per l'etichetta */
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+input[type="text"], 
+input[type="tel"], 
+input[type="date"], 
+input[type="time"], 
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* FOCUS STATES (Usabilità) */
+input:focus, select:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 8px rgba(139, 26, 77, 0.25); /* Sfumatura di colore al focus */
+    outline: none; /* Rimuove l'outline predefinito del browser */
+}
+
+
+/* Pulsante di Invio - Hover e Interattività */
+.btn-primary {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%; /* Rende il pulsante largo per l'intera sezione */
+    margin-top: 15px;
+}
+
+/* Hover state sul bottone */
+.btn-primary:hover {
+    background-color: #6a153d; /* Tono più scuro al passaggio del mouse */
+    box-shadow: 0 6px 15px rgba(139, 26, 77, 0.3); /* Ombra leggermente più intensa */
+}
+
+/* Stato attivo (click) sul bottone */
+.btn-primary:active {
+    transform: translateY(2px); /* Effetto "premuto" per dare feedback tattile */
+    box-shadow: none;
+}
+
+
+/* MESSAGGIO DI STATO */
+#message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none; /* Inizialmente nascosto */
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* SEZIONE CONTATTI (FOOTER) */
+.contact-info {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px !important; /* Spinge il footer lontano dal form */
+    border-top: 1px solid #eee;
+}
+
+/* Media Query per la Responsività */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Amministratore - EsseBiFashion</title>
+    <link rel="stylesheet" href="./style.css"> <!-- Riusiamo lo stile esistente per coerenza -->
+    <style>
+        /* Stili specifici per il pannello Admin (per separare la vista) */
+        #admin-dashboard {
+            padding: 30px;
+            background-color: #f8f9fa; /* Sfondo leggermente grigio per distinguerlo dal form principale */
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #appuntamentiTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        #appuntamentiTable th, #appuntamentiTable td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #appuntamentiTable th {
+            background-color: var(--primary-dark);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Stili per evidenziare lo stato (es. Prenotato, Completato) */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+
+        .status-prenotato {
+            background-color: #d4edda; /* Verde chiaro */
+            color: #155724;
+        }
+        .status-completato {
+            background-color: #ccc;
+            color: #6c757d;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="admin-dashboard">
+        <h1>🗓️ Dashboard Amministratore - Gestione Prenotazioni</h1>
+        <p>Visualizzazione in tempo reale di tutti gli appuntamenti salvati.</p>
+        
+        <table id="appuntamentiTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente (Nome/Telef.)</th>
+                    <th>Servizio</th>
+                    <th>Data & Orario</th>
+                    <th>Stato</th>
+                </tr>
+            </thead>
+            <tbody id="appuntamentiBody">
+                <!-- Qui verranno iniettate le righe dei dati da script.js -->
+                <tr><td colspan="5" style="text-align: center;">Caricamento appuntamenti in corso...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../script.js"></script> <!-- Riferimento allo script principale per coerenza -->
+    <script src="./admin.js"></script> <!-- Il nostro nuovo script di gestione dashboard -->
+</body>
+</html>
