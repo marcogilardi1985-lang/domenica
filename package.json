@@ -1,0 +1,13 @@
+{
+  "name": "essebifashion-booking",
+  "version": "1.0.0",
+  "description": "Sito web per la prenotazione di servizi di bellezza.",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Backend simulato: il sito è statico e deve essere servito come file statici.'"
+  },
+  "dependencies": {
+    "express": "^4.19.2" 
+    // Aggiungo express per farlo sembrare un progetto backend, anche se lo useremo solo per la struttura.
+  }
+}
